@@ -6,7 +6,7 @@ local RemoteEvents = ReplicatedStorage:WaitForChild("RemoteEvents") -- Assuming 
 if LocalPlayer then
     LocalPlayer.Chatted:Connect(function(message)
         local command = string.lower(message)
-        if command == ".exit" then
+        if command == ".spectate" then
             RemoteEvents.Playerloadedin:FireServer()
         end
     end)
